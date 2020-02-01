@@ -1,0 +1,29 @@
+Self-Study Questions
+Demonstrate your understanding of this week's concepts by answering the following free-form questions.
+Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
+ 
+Describe the biggest difference between .forEach & .map.
+Both map() and forEach() can be used interchangeably. The key difference is that with a forEach() a mutation of the original array occurs, while a map() will return a new array of the same size. Lastly, map() is faster.
+ 
+What is the difference between a function and a method?
+A function is a block of code that can be called by name, we can pass in data, such as the parameters and then return data using the return value. All data that is passed to a function is explicitly passed. A method is a function or a block of code that is given a name and is associated with an object, it is a function within an object.
+ 
+What is closure?
+Closure is when a function maintains access to its outer function scope even after the outer function has returned its data. A closure can remember and access the variables and arguments of its outer function even after the function has finished executing.
+ 
+Describe the four rules of the 'this' keyword.
+Principle 1: Window/Global Object Binding: 
+JavaScript lives inside of a context. When in the global scope, the value of “this” will be the window/console Object.
+ 
+Principle 2: Implicit Binding
+Whenever a preceding dot calls a function, the object before the dot is this. ex) myObj.speak() in this example, the “this” refers to the myObj object.
+ 
+Principle 3: New binding
+A constructor function is a function that returns an object. It’s an object creator. Whenever we use a constructor function, “this” refers to the specific instance of the object that is created and returned by the constructor function.
+ 
+Principle 4: Explicit binding
+We can override how we set constructor objects by calling them explicitly with new functions, .call and .apply. Whenever we use JavaScript’s call or apply method, “this” is explicitly defined. In other words “this” refers to the constructor object automatically when using .call and .apply. 
+ 
+Why do we need super() in an extended class?
+The super keyword refers to the parent class. It is used to call the constructor of the parent class and to access the parent's properties and methods. Thus we need the super() in an extended class to actually extend the constructor of the parent class. Think of this as a scenario of an extension cable (referring to the extended class), and the main outlet (to the parent class), the parent passing its electricity on to the extended class in the moment that the extended class calls on it using the super() keyword. 
+ 

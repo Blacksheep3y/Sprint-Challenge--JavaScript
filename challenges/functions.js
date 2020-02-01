@@ -16,17 +16,33 @@
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
+function consume(a, b, cb){
+return cb(a, b);
+}
 
+function add(num1, num2){
+return num1 + num2;
+}
+
+function multiply(num1, num2){
+return num1 * num2;
+}
+
+function greeting(firstname, lastname){
+return `Hello ${firstname} ${lastname}, nice to meet you!`;
+}
 // ==== Closures ==== 
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-
+  /* Simply put, Javascript is written in the global scope. When a function is created it has access to the global scope, within its own function scope.
+  A function within a function (a nested function) therefore has access to the global scope and has access to the function scope in which it is nested in.
+  every nested function has access to pretty much everything and anything outside of it's scope. */
 
 const external = "I'm outside the function";
 
